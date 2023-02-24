@@ -50,7 +50,7 @@ public class Die
         string dieString = "Unknown";
 
         // This "switch" statement behaves like a series of "if/else if" statements.
-        //  We compare the numeric Value of the current object accross different "cases".
+        //  We compare the numeric Value of the current object across different "cases".
         //  When we find a matching case we return a string that represents an image of a die
         // Did you kow that JavaScript also has "switch" statements?
         switch (this.Value)

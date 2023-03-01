@@ -41,7 +41,7 @@ namespace insulter
             }
 
             //Clears the screen for the console.
-            Console.Clear();
+
 
 
 
@@ -64,7 +64,30 @@ namespace insulter
             }
 
 
+            //blank list
+            List<int> ListNumbers = new List<int>();
+            Random rnd = new Random();
+            int number;
+            for (int i = 0; i < 3; i++)
+            {
+                do
+                {
+                    // this will generate a random number as long as the number is already in the list.
+                    number = rnd.Next(0, affirmations.Count - 1);
+                } while (ListNumbers.Contains(number));
+                ListNumbers.Add(number);
+            }
 
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("Kaci's Affirmations");
+            for (var i = 0; i < ListNumbers.Count; i++)
+            {
+                var index = ListNumbers[i];
+                Console.WriteLine(affirmations[index]);
+            };
         }
     }
 }
